@@ -1,104 +1,151 @@
 /* ---------- RESET ---------- */
 
+/* ==========================================================================
+
+   PAPYRO
+   Website Oficial
+   Versão 2.0
+
+========================================================================== */
+
+
+/* ==========================================================================
+   RESET
+========================================================================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-body{
+html{
+    scroll-behavior:smooth;
+}
 
+body{
+    font-family:"Montserrat",sans-serif;
     background:#F7F3EE;
-    font-family:'Montserrat',sans-serif;
     color:#5B4B3A;
+    overflow-x:hidden;
+}
+
+
+/* ==========================================================================
+   VARIÁVEIS
+========================================================================== */
+
+:root{
+
+    --castanho:#4F4034;
+    --texto:#5B4B3A;
+    --bege:#F3EDE6;
+    --fundo:#F7F3EE;
+    --dourado:#B79C82;
+    --branco:#FFFFFF;
+
+    --sombra:0 12px 35px rgba(0,0,0,.08);
 
 }
 
-/* ---------- CABEÇALHO ---------- */
+
+/* ==========================================================================
+   GERAL
+========================================================================== */
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+section{
+    width:100%;
+}
+
+
+/* ==========================================================================
+   CABEÇALHO
+========================================================================== */
 
 .topo{
 
-    position:relative;
+    background:var(--bege);
 
-    display:flex;
+    display:grid;
 
-    justify-content:center;
+    grid-template-columns:180px 1fr 180px;
 
     align-items:center;
 
-    padding:40px 20px 30px;
-
-    background:#f3ede6;
-
-}
-.monograma{
-
-    position:absolute;
-    left:135px;
-
-    width:145px;
-    height:auto;
+    padding:25px 60px;
 
 }
 
-.titulo-site{
+.logo{
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-}
-
-.titulo-site span{
-
-    font-size:12px;
-    letter-spacing:10px;
-    color:#8b7662;
-    margin-bottom:10px;
-
-}
-
-.titulo-site h1{
-
-    font-family:"Cormorant Garamond", serif;
-    font-size:72px;
-    font-weight:500;
-    color:#4f4034;
-    margin:0;
+    justify-self:start;
 
 }
 
 .logo img{
 
-    width:120px;
-    height:auto;
+    width:145px;
+
+    transition:.35s ease;
 
 }
 
+.logo img:hover{
 
-.texto-logo span{
+    transform:scale(1.04);
 
-    font-size:18px;
+}
+
+.titulo-site{
+
+    text-align:center;
+
+}
+
+.titulo-site span{
+
+    display:block;
+
+    font-size:13px;
+
     letter-spacing:10px;
-    color:#8D7764;
+
+    color:#8B7662;
+
     margin-bottom:8px;
 
 }
 
-.texto-logo h1{
+.titulo-site h1{
 
-    font-family:'Cormorant Garamond',serif;
-    font-size:72px;
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(3.5rem,5vw,4.8rem);
+
     font-weight:500;
-    color:#4F4034;
-     margin:0;
+
+    color:var(--castanho);
 
 }
-/* ---------- HERO ---------- */
+
+
+/* ==========================================================================
+   HERO
+========================================================================== */
 
 .hero{
 
-    height:85vh;
+    min-height:75vh;
 
     background-image:url("imagens/cabecalho.jpg");
     background-size:cover;
@@ -108,126 +155,273 @@ body{
     justify-content:center;
     align-items:center;
 
+    padding:60px 20px;
+
 }
 
 .hero-conteudo{
 
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(8px);
+
+    padding:60px;
+
+    border-radius:14px;
+
+    max-width:700px;
+
+    width:100%;
+
     text-align:center;
 
-    background:rgba(255,255,255,.58);
+    box-shadow:var(--sombra);
 
-    padding:60px 70px;
-
-    border-radius:8px;
-
-    backdrop-filter:blur(4px);
+    animation:fadeUp .8s ease;
 
 }
 
 .hero h2{
 
-    font-family: "Bodoni Moda", serif;
-    font-weight: 600;
-    letter-spacing: 2px;
-    font-size: 50px;
-    line-height: 1.05;
-    letter-spacing: 3px;
+    font-family:"Bodoni Moda",serif;
+
+    font-size:clamp(2.8rem,5vw,4.4rem);
+
+    color:var(--castanho);
 
     margin-bottom:25px;
 
-    color:#4f4034;
+    letter-spacing:2px;
 
 }
 
 .hero p{
 
-    font-size:18px;
+    font-size:1.15rem;
 
-    line-height:1.8;
+    line-height:1.9;
+
+    color:var(--texto);
 
     margin-bottom:40px;
 
-    color:#5b4b3a;
-
 }
+
+
+/* ==========================================================================
+   BOTÃO
+========================================================================== */
 
 .botao{
 
-    display:inline-block;
+    display:inline-flex;
 
-    text-decoration:none;
+    justify-content:center;
 
-    background:#b79c82;
-
-    color:white;
+    align-items:center;
 
     padding:18px 40px;
 
-    border-radius:6px;
+    background:var(--dourado);
 
-    transition:.3s;
+    color:white;
+
+    border-radius:8px;
+
+    font-weight:500;
+
+    transition:.35s ease;
 
 }
 
 .botao:hover{
 
-    background:#9d8267;
+    background:#a7896c;
 
-}
-/* ---------- RODAPÉ ---------- */
+    transform:translateY(-3px);
 
-footer{
-
-      display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:30px;
-
-    padding:40px 20px 30px;
-
-    background:#f3ede6;
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
 
 }
 
-.footer-contacto{
+.botao:active{
+
+    transform:translateY(0);
+
+}
+
+
+/* ==========================================================================
+   ANIMAÇÕES
+========================================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================================
+   HERO
+========================================================================== */
+
+.hero{
+
+    min-height:75vh;
+
+    background-image:url("imagens/cabecalho.jpg");
+    background-size:cover;
+    background-position:center;
 
     display:flex;
-
     justify-content:center;
+    align-items:center;
 
-    gap:60px;
+    padding:60px 20px;
+
+}
+
+.hero-conteudo{
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(8px);
+
+    padding:60px;
+
+    border-radius:14px;
+
+    max-width:700px;
+
+    width:100%;
+
+    text-align:center;
+
+    box-shadow:var(--sombra);
+
+    animation:fadeUp .8s ease;
+
+}
+
+.hero h2{
+
+    font-family:"Bodoni Moda",serif;
+
+    font-size:clamp(2.8rem,5vw,4.4rem);
+
+    color:var(--castanho);
 
     margin-bottom:25px;
 
-    flex-wrap:wrap;
+    letter-spacing:2px;
 
 }
 
-.footer-contacto a{
+.hero p{
 
-    color:#5b4b3a;
+    font-size:1.15rem;
 
-    text-decoration:none;
+    line-height:1.9;
 
-    font-size:px;
+    color:var(--texto);
 
-    transition:.3s;
-
-}
-
-.footer-contacto a:hover{
-
-    color:#b79c82;
+    margin-bottom:40px;
 
 }
 
-footer p{
-    color:#7a6c5e;
-    font-size:15px;
-    margin:0;
+
+/* ==========================================================================
+   BOTÃO
+========================================================================== */
+
+.botao{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:18px 40px;
+
+    background:var(--dourado);
+
+    color:white;
+
+    border-radius:8px;
+
+    font-weight:500;
+
+    transition:.35s ease;
+
+}
+
+.botao:hover{
+
+    background:#a7896c;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+
+}
+
+.botao:active{
+
+    transform:translateY(0);
+
+}
+
+
+/* ==========================================================================
+   ANIMAÇÕES
+========================================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   RODAPÉ
+========================== */
+
+footer{
+
+    background:#f3ede6;
+
+    padding:35px 20px;
+
 }
 
 .contactos{
@@ -238,44 +432,108 @@ footer p{
 
     align-items:center;
 
-    gap:100px;
+    gap:60px;
+
+    flex-wrap:wrap;
 
 }
 
 .contacto{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
 
-.contacto a{
     display:flex;
-    align-items:center;
-    color:#4f4034;
-    text-decoration:none;
-    line-height:1;
-}
 
-.contacto a:hover{
-    text-decoration:underline;
+    align-items:center;
+
+    gap:12px;
+
 }
 
 .email-icon,
 .instagram-icon{
-    width:34px;
-    height:34px;
+
+    width:22px;
+
+    height:22px;
+
     object-fit:contain;
-    transition:.3s;
+
 }
 
-.email-icon:hover,
-.instagram-icon:hover{
-    transform:scale(1.1);
+.contacto a{
+
+    color:#4f4034;
+
+    text-decoration:none;
+
+    font-size:16px;
+
 }
 
-.contacto{
-    display:flex;
-    align-items:center;
-    gap: 10px;
-    min-height:42px;
+.contacto a:hover{
+
+    color:#b79c82;
+
+}
+
+footer p{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#7a6c5e;
+
+    font-size:14px;
+
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .contactos{
+
+        flex-direction:column;
+
+        gap:18px;
+
+    }
+
+    .contacto{
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ======================================================
+   RESPONSIVO
+====================================================== */
+
+@media (max-width:768px){
+
+    .topo{
+        grid-template-columns:1fr;
+        justify-items:center;
+        padding:25px 20px;
+    }
+
+    .logo{
+        justify-self:center;
+    }
+
+    .logo img{
+        width:100px;
+    }
+
+    .titulo-site h1{
+        font-size:3rem;
+    }
+
+    .titulo-site span{
+        font-size:10px;
+        letter-spacing:6px;
+    }
+
 }
