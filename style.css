@@ -559,3 +559,13 @@ body{
 html{
     overflow-x:hidden;
 }
+
+@media (max-width: 768px){
+
+    .hero h2{
+        font-size:2rem;
+        line-height:1;
+        letter-spacing:0;
+    }
+
+}
