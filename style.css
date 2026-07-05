@@ -296,23 +296,17 @@ section{
 
 .hero-conteudo{
 
-    background:rgba(255,255,255,.65);
+    background: rgba(255,255,255,0.50);
 
-    backdrop-filter:blur(8px);
+    backdrop-filter: blur(12px);
 
-    padding:60px;
+    -webkit-backdrop-filter: blur(15px);
 
-    border-radius:14px;
+    border: 1px solid rgba(255,255,255,0.35);
 
-    max-width:700px;
+    border-radius: 14px;
 
-    width:100%;
-
-    text-align:center;
-
-    box-shadow:var(--sombra);
-
-    animation:fadeUp .8s ease;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
 
 }
 
@@ -525,11 +519,53 @@ footer p{
 
 @media (max-width:768px){
 
+    
+
     .topo{
-        grid-template-columns:1fr;
-        justify-items:center;
-        padding:25px 20px;
-    }
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+
+}
+
+.monograma{
+
+    position:static;
+
+    left:0;
+
+    width:65px;
+
+    height:auto;
+
+}
+
+.titulo-site{
+
+    text-align:left;
+
+}
+
+.titulo-site span{
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    margin-bottom:4px;
+
+}
+
+.titulo-site h1{
+
+    font-size:3rem;
+
+    line-height:1;
+
+}
 
     .logo{
         justify-self:center;
