@@ -1,0 +1,281 @@
+/* ---------- RESET ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#F7F3EE;
+    font-family:'Montserrat',sans-serif;
+    color:#5B4B3A;
+
+}
+
+/* ---------- CABEÇALHO ---------- */
+
+.topo{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px 30px;
+
+    background:#f3ede6;
+
+}
+.monograma{
+
+    position:absolute;
+    left:135px;
+
+    width:145px;
+    height:auto;
+
+}
+
+.titulo-site{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.titulo-site span{
+
+    font-size:12px;
+    letter-spacing:10px;
+    color:#8b7662;
+    margin-bottom:10px;
+
+}
+
+.titulo-site h1{
+
+    font-family:"Cormorant Garamond", serif;
+    font-size:72px;
+    font-weight:500;
+    color:#4f4034;
+    margin:0;
+
+}
+
+.logo img{
+
+    width:120px;
+    height:auto;
+
+}
+
+
+.texto-logo span{
+
+    font-size:18px;
+    letter-spacing:10px;
+    color:#8D7764;
+    margin-bottom:8px;
+
+}
+
+.texto-logo h1{
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:72px;
+    font-weight:500;
+    color:#4F4034;
+     margin:0;
+
+}
+/* ---------- HERO ---------- */
+
+.hero{
+
+    height:85vh;
+
+    background-image:url("imagens/cabecalho.jpg");
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.hero-conteudo{
+
+    text-align:center;
+
+    background:rgba(255,255,255,.58);
+
+    padding:60px 70px;
+
+    border-radius:8px;
+
+    backdrop-filter:blur(4px);
+
+}
+
+.hero h2{
+
+    font-family: "Bodoni Moda", serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 50px;
+    line-height: 1.05;
+    letter-spacing: 3px;
+
+    margin-bottom:25px;
+
+    color:#4f4034;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+    color:#5b4b3a;
+
+}
+
+.botao{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:#b79c82;
+
+    color:white;
+
+    padding:18px 40px;
+
+    border-radius:6px;
+
+    transition:.3s;
+
+}
+
+.botao:hover{
+
+    background:#9d8267;
+
+}
+/* ---------- RODAPÉ ---------- */
+
+footer{
+
+      display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:30px;
+
+    padding:40px 20px 30px;
+
+    background:#f3ede6;
+
+}
+
+.footer-contacto{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:60px;
+
+    margin-bottom:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-contacto a{
+
+    color:#5b4b3a;
+
+    text-decoration:none;
+
+    font-size:px;
+
+    transition:.3s;
+
+}
+
+.footer-contacto a:hover{
+
+    color:#b79c82;
+
+}
+
+footer p{
+    color:#7a6c5e;
+    font-size:15px;
+    margin:0;
+}
+
+.contactos{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:100px;
+
+}
+
+.contacto{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.contacto a{
+    display:flex;
+    align-items:center;
+    color:#4f4034;
+    text-decoration:none;
+    line-height:1;
+}
+
+.contacto a:hover{
+    text-decoration:underline;
+}
+
+.email-icon,
+.instagram-icon{
+    width:34px;
+    height:34px;
+    object-fit:contain;
+    transition:.3s;
+}
+
+.email-icon:hover,
+.instagram-icon:hover{
+    transform:scale(1.1);
+}
+
+.contacto{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+    min-height:42px;
+}
